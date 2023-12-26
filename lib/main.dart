@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget{
   Widget build(BuildContext context) {
 
     return MaterialApp(
-        theme: ThemeData(primarySwatch: Colors.green),
+        // theme: ThemeData(primarySwatch: Colors.green),
         home:HomeAcivity()
     );
   }
@@ -30,7 +30,7 @@ class HomeAcivity extends StatelessWidget{
 
     return Scaffold(
 
-      appBar: AppBar(title: Text("My App"),),
+      appBar: AppBar(title: Text("My App",style: TextStyle(color: Colors.white),),backgroundColor: Colors.green,),
       body: Text("Hello World"),
     );
   }
