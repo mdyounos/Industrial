@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 main(){
   runApp(const MyApp());  //Application
@@ -66,13 +67,16 @@ class HomeAcivity extends StatelessWidget{
         ],
         onTap: (int index){
           if(index==0){
-            MySnackBar('Tap on Bottom Navigation Bar ${index+1}', context);
+            //MySnackBar('Tap on Bottom Navigation Bar ${index+1}', context);
+            Fluttertoast.showToast(msg: 'Clicked on Home');
           }
           if(index==1){
-            MySnackBar('Tap on Bottom Navigation Bar ${index+1}', context);
+            Fluttertoast.showToast(msg: 'Clicked on Email');
+            //MySnackBar('Tap on Bottom Navigation Bar ${index+1}', context);
           }
           if(index==2){
-            MySnackBar('Tap on Bottom Navigation Bar ${index+1}', context);
+            Fluttertoast.showToast(msg: 'Clicked on profile');
+            //MySnackBar('Tap on Bottom Navigation Bar ${index+1}', context);
           }
         }
 
@@ -84,7 +88,10 @@ class HomeAcivity extends StatelessWidget{
       drawer: Drawer(
         child: ListView(
           children: const [
-            DrawerHeader(child: Text("About Me")),
+
+            DrawerHeader(child:
+            Text("About Me")
+                ),
             ListTile(title: Text("Md Younos"),),
             ListTile(title: Text("ID: 194028"),),
             ListTile(title: Text("Department: CSE"),),
